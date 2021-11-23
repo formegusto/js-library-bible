@@ -1,12 +1,12 @@
 # sequelize
 
-# 1. Reference
+## 1. Reference
 
 [Sequelize](https://sequelize.org/v5/manual/getting-started.html)
 
 - sequelize v5 based
 
-# 2. Sequelize
+## 2. Sequelize
 
 - Sequelize는 RDBMS인, Postgres, MySQL, MariaDB, SQLite 그리고 MSSQL을 위한 promise-based(비동기 기반) Node.js ORM(Object Relational Mapping) 이다.
 - Sequelize는 견고한 트랜잭션, Relations, eager(?) 그리고 lazy loading 을 지원한다.
