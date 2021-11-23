@@ -1,6 +1,7 @@
 "use strict";
 
 // sequelize migration:create --name timestamps
+// sequelize db:migrate --env development
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.createTable("myTable", {
