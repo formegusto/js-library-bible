@@ -1,0 +1,10 @@
+{
+  "name": "sequelize",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "sequelize": "^5.9.x",
+    "sqlite3": "^5.0.2"
+  }
+}
