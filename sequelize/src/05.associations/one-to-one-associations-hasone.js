@@ -42,6 +42,9 @@ Company.init(
   { sequelize, modelName: "company" }
 );
 Company.hasOne(User, { foreignKey: "companyName", sourceKey: "name" });
+/*
+FOREIGN KEY (`companyName`) REFERENCES `companies` (`name`)
+*/
 
 sequelize.sync({ force: true }).then(() => {
   console.log("[database] connected :)");
