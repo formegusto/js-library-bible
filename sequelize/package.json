@@ -8,5 +8,7 @@
     "mysql2": "^2.3.3",
     "sequelize": "^5.9.x",
     "sqlite3": "^5.0.2"
+  },"scripts": {
+    "start-ts": "tsc && node dist/index"
   }
 }
