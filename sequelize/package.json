@@ -8,7 +8,13 @@
     "mysql2": "^2.3.3",
     "sequelize": "^5.9.x",
     "sqlite3": "^5.0.2"
-  },"scripts": {
+  },
+  "scripts": {
     "start-ts": "tsc && node dist/index"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.36",
+    "@types/node": "^16.11.10",
+    "@types/validator": "^13.7.0"
   }
 }
