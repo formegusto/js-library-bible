@@ -18,7 +18,7 @@ class Project extends Model {
         },
         ownerId: {
           type: DataTypes.INTEGER.UNSIGNED,
-          allowNull: false,
+          allowNull: true,
         },
         name: {
           type: DataTypes.STRING,

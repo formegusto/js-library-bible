@@ -1,5 +1,19 @@
+import {
+  createDataWithUserAddress,
+  createDataWithUserProject,
+} from "./examples/create-data";
 import sequelize from "./models";
 
-sequelize.sync({ force: true }).then(() => {
-  console.log("[database] connected :)");
-});
+async function _() {
+  try {
+    await sequelize.sync({ force: true });
+    console.log("[database] connected :)");
+
+    await createDataWithUserProject();
+
+    await createDataWithUserAddress();
+  } catch (err) {
+    console.log((err as any).message);
+  }
+}
+_();

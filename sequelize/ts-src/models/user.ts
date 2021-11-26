@@ -10,6 +10,8 @@ import {
   HasManyCreateAssociationMixin,
   HasOneGetAssociationMixin,
   HasOneSetAssociationMixin,
+  HasManySetAssociationsMixin,
+  HasOneCreateAssociationMixin,
 } from "sequelize";
 import Address from "./address";
 import Project from "./project";
@@ -25,6 +27,7 @@ class User extends Model {
 
   // association func
   public getProjects!: HasManyGetAssociationsMixin<Project>;
+  public setProjects!: HasManySetAssociationsMixin<Project, number>;
   public addProject!: HasManyAddAssociationsMixin<Project, number>;
   public hasProject!: HasManyHasAssociationMixin<Project, number>;
   public countProjects!: HasManyCountAssociationsMixin;
@@ -32,6 +35,7 @@ class User extends Model {
 
   public getAddress!: HasOneGetAssociationMixin<Address>;
   public setAddress!: HasOneSetAssociationMixin<Address, number>;
+  public createAddress!: HasOneCreateAssociationMixin<Address>;
 
   public readonly projects?: Project[];
   public readonly address?: Address;
