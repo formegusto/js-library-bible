@@ -16,14 +16,20 @@ import {
 import Address from "./address";
 import Project from "./project";
 
-class User extends Model {
-  public id!: number;
+interface UserAttributes {
+  id: number;
+  name: string;
+  preferredName: string | null;
+}
+
+class User extends Model<UserAttributes> {
+  public readonly id!: number;
   public name!: string;
   public preferredName!: string | null;
 
   // timestamps
   public readonly createdAt!: Date;
-  public readonly updatedat!: Date;
+  public readonly updatedAt!: Date;
 
   // association func
   public getProjects!: HasManyGetAssociationsMixin<Project>;

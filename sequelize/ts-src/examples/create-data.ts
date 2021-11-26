@@ -1,3 +1,4 @@
+import { DefineModel } from "../models";
 import Project from "../models/project";
 import User from "../models/user";
 import { AddressCol, ProjectCol, UserCol } from "../types/col";
@@ -73,4 +74,22 @@ export async function createDataWithUserAddress() {
     include: [User.associations.address],
   });
   console.log(user?.address?.get({ plain: true }));
+}
+
+export async function playDataUser() {
+  const user = await User.findByPk(1);
+
+  console.log("original name:", user?.name);
+  if (user) user.name = "idontknow :)";
+  const newUser = await user?.save();
+  console.log("new name:", newUser?.name);
+}
+
+export async function playDefineModel() {
+  await DefineModel.create();
+
+  const defineModel = await DefineModel.findByPk(1, {
+    rejectOnEmpty: true,
+  });
+  console.log(defineModel.get({ plain: true }));
 }

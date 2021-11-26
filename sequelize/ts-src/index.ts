@@ -1,6 +1,8 @@
 import {
   createDataWithUserAddress,
   createDataWithUserProject,
+  playDataUser,
+  playDefineModel,
 } from "./examples/create-data";
 import sequelize from "./models";
 
@@ -12,6 +14,10 @@ async function _() {
     await createDataWithUserProject();
 
     await createDataWithUserAddress();
+
+    await playDataUser();
+
+    await playDefineModel();
   } catch (err) {
     console.log((err as any).message);
   }
