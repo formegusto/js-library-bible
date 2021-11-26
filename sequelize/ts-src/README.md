@@ -103,7 +103,7 @@ public static associationsConfig() {
 
 ## Basic Usage
 
-- 소스코드 참고
+- [소스코드 참고](https://github.com/formegusto/js-library-bible/blob/master/sequelize/ts-src/examples/create-data.ts)
 
 ## Usage of sequelize.define
 
