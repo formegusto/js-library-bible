@@ -20,7 +20,7 @@ class Project extends Model {
     Project.hasMany(db.Task);
     Project.belongsToMany(db.User, {
       through: db.UserProject,
-      as: { singular: "Task", plural: "Tasks" },
+      as: { singular: "Worker", plural: "Workers" },
       foreignKey: "taskId",
     });
   }
