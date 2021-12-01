@@ -1,0 +1,16 @@
+{
+  "name": "fakerjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "faker": "^5.5.3"
+  },
+  "scripts": {
+    "start": "node src/localization",
+    "start-ts": "tsc && node dist/index"
+  },
+  "devDependencies": {
+    "@types/faker": "^5.5.9"
+  }
+}
