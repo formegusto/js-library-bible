@@ -1,0 +1,19 @@
+{
+  "name": "crypto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && node dist/index"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.36",
+    "@types/node": "^16.11.10",
+    "@types/node-rsa": "^1.1.1",
+    "@types/validator": "^13.7.0"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "node-rsa": "^1.1.1"
+  }
+}
