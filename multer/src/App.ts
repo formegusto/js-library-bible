@@ -18,6 +18,7 @@ class App {
   }
 
   Router() {
+    this.server.use("/static", express.static("public"));
     this.server.use(Routes);
 
     // Error Handling

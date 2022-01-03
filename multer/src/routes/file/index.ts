@@ -3,7 +3,7 @@ import multer from "multer";
 import path from "path";
 
 const FileRoutes = Router();
-const uploads = multer({ dest: "src/uploads" });
+const uploads = multer({ dest: "src/public/image" });
 const ds = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, "src/uploads/diskStorage");
