@@ -77,3 +77,10 @@ wb.Sheets["MERGES"]["A2"] = {
 };
 
 XLSXSTYLE.writeFile(book, "user_department.xlsx");
+
+const test = XLSXSTYLE.write(wb, {
+  bookType: "xlsx",
+  bookSST: false,
+  type: "binary",
+});
+console.log(typeof test);
